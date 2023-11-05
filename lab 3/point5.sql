@@ -1,6 +1,6 @@
 -- Active: 1698135558995@@127.0.0.1@3306@cd
 USE cd;
-SELECT DISTINCT firstname, surname FROM members
-JOIN bookings ON members.memid = bookings.memid
-JOIN facilities ON facilities.facid = bookings.facid
-WHERE facilities.facility LIKE '%Tennis court%';
+SELECT DISTINCT surname,firstname FROM members 
+JOIN bookings ON bookings.memid=members.memid
+JOIN facilities ON bookings.facid=facilities.facid
+WHERE facility LIKE "%Tennis Court%" AND firstname NOT LIKE "GUEST";
