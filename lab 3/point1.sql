@@ -1,5 +1,4 @@
--- Active: 1698135558995@@127.0.0.1@3306@cd
-#
+/* Выберите лист времке  (timestamp) покупки времени использования объектов членом клуба 'David Farrell'. */
 USE cd;
 SELECT starttime FROM bookings
 JOIN members ON bookings.memid = members.memid
