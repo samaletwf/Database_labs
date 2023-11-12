@@ -1,4 +1,3 @@
--- Active: 1698135558995@@127.0.0.1@3306@cd
 /*Вносим 2 строки с одинаковыми значениями с индексами в Squash court*/
 USE cd;
 INSERT INTO facilities (facid, facility, membercost, guestcost, initialoutlay, monthlymaintenance)

@@ -1,4 +1,3 @@
--- Active: 1698135558995@@127.0.0.1@3306@cd
 /*Вводим новые значения папаметров membercost и guestcost, в полях с facid = 0 и 1*/
 USE cd;
 UPDATE facilities
