@@ -1,7 +1,9 @@
--- Active: 1699770253704@@127.0.0.1@3306@cd
 USE cd;
-SELECT * from members
-where memid not in(select distinct memid from bookings);
+/* Выводим всех членов клуба, которые не арендовали объекты клуба, затем 
+удаляем всех членов клуба, которые не арендовали объекты клуба
+и проверяем есть ли член клуба с memid = 37  */
+SELECT * FROM members
+WHERE memid NOT  IN (SELECT memid FROM bookings);
 DELETE FROM members
-WHERE memid not in (select memid from bookings);
-select * from members where memid = 37;
+WHERE memid NOT IN (SELECT memid FROM bookings);
+SELECT * FROM members WHERE memid = 37;
