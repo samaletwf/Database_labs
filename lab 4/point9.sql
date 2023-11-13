@@ -1,3 +1,4 @@
+-- Active: 1699770253704@@127.0.0.1@3306@cd
 USE cd;
 SELECT * from members
 where memid not in(select distinct memid from bookings);
