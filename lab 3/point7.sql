@@ -1,6 +1,5 @@
 /*Выбираем список членов клуба, включая рекомендованных людей, без объединений и дубликатов. Сортируем по ФИО*/
  USE cd;
-SELECT DISTINCT concat(mem.surname,' ',mem.firstname) AS Full_membername,
-concat(rec.surname,' ',rec.firstname) AS Full_recname
-FROM members mem, (SELECT memid, recommendedby, surname, firstname FROM members) rec 
-WHERE mem.recommendedby=rec.memid; 
+SELECT CONCAT(m1.firstname, ' ', m1.surname) AS fiomember, (SELECT CONCAT(m2.firstname, ' ', m2.surname) 
+FROM members m2 WHERE m2.memid = m1.recommendedby) AS fiorecommendedby FROM members m1
+WHERE m1.memid != 0 ORDER BY fiomember;
