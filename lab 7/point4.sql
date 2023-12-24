@@ -1,5 +1,6 @@
 -- Active: 1699770253704@@127.0.0.1@3306@cd
--- Task-7-4: Создаем функцию для расчета изменения стоимости аренды
+
+--Создаем функцию для расчета изменения стоимости аренды
 DELIMITER //
 CREATE FUNCTION CalculateRentChangePercentage(facID INT, percentageChange DECIMAL(5, 2)) RETURNS DECIMAL(5, 2) DETERMINISTIC
 BEGIN
